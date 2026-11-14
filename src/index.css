@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* ============================================
+   Tailwind CSS v4 — 主题定制
+   所有设计 token 在这里统一维护
+   ============================================ */
+@theme {
+  /* --- 颜色 --- */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #fafafa;
+  --color-bg-muted: #f4f4f5;
+
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #52525b;
+  --color-text-muted: #a1a1aa;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #e4e4e7;
+  --color-border-subtle: #f1f1f3;
+
+  --color-accent: #0a0a0a;
+  --color-accent-hover: #18181b;
+
+  /* --- 字体 --- */
+  --font-sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: "Inter", "PingFang SC", system-ui, sans-serif;
+
+  /* --- 间距 --- */
+  --space-section: 8rem;
+  --space-section-sm: 4rem;
+  --space-card-gap: 1.5rem;
+
+  /* --- 圆角 --- */
+  --radius-card: 0.75rem;
+  --radius-sm: 0.5rem;
+
+  /* --- 动画时长 --- */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+}
+
+/* ============================================
+   全局基础样式
+   ============================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  /* 选择文字颜色 */
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
+  }
+}
