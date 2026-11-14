@@ -4,7 +4,7 @@
 // ============================================
 
 export { profile, skills, experiences } from './profile'
-export { featuredProjects } from './home'
+export { featuredProjects, heroContent } from './home'
 export { products, PRODUCT_CATEGORIES } from './products'
 export { visuals, VISUAL_CATEGORIES } from './visuals'
 export { photos, PHOTO_CATEGORIES } from './photos'

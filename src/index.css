@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================
-   Tailwind CSS v4 — 主题定制
-   所有设计 token 在这里统一维护
+   Tailwind CSS v4 — 主题定制（Figma 设计稿对齐）
    ============================================ */
 @theme {
   /* --- 颜色 --- */
@@ -10,20 +9,22 @@
   --color-bg-subtle: #fafafa;
   --color-bg-muted: #f4f4f5;
 
-  --color-text-primary: #0a0a0a;
-  --color-text-secondary: #52525b;
-  --color-text-muted: #a1a1aa;
+  /* Figma: 主文字 #1A1A1A(接近), 次文字 #666, 边框 #E2E2E2 */
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
   --color-text-inverse: #ffffff;
 
-  --color-border: #e4e4e7;
+  --color-border: #e2e2e2;
   --color-border-subtle: #f1f1f3;
 
-  --color-accent: #0a0a0a;
-  --color-accent-hover: #18181b;
+  /* Figma 主色蓝 */
+  --color-accent: #3368ff;
+  --color-accent-hover: #2a55d1;
 
   /* --- 字体 --- */
-  --font-sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-  --font-display: "Inter", "PingFang SC", system-ui, sans-serif;
+  --font-sans: "MiSans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: "MiSans", "PingFang SC", system-ui, sans-serif;
 
   /* --- 间距 --- */
   --space-section: 8rem;
@@ -32,6 +33,7 @@
 
   /* --- 圆角 --- */
   --radius-card: 0.75rem;
+  --radius-pill: 2rem;  /* 44px Figma */
   --radius-sm: 0.5rem;
 
   /* --- 动画时长 --- */
@@ -57,7 +59,6 @@
     line-height: 1.6;
   }
 
-  /* 选择文字颜色 */
   ::selection {
     background-color: var(--color-accent);
     color: var(--color-text-inverse);

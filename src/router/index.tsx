@@ -9,6 +9,7 @@ const VisualPage = lazy(() => import('@/pages/Visual'))
 const PhotographyPage = lazy(() => import('@/pages/Photography'))
 const CreatorPage = lazy(() => import('@/pages/Creator'))
 const AboutPage = lazy(() => import('@/pages/About'))
+const WorksDetailPage = lazy(() => import('@/pages/WorksDetail'))
 
 /** 轻量 fallback，不使用全屏遮挡 */
 function PageLoading() {
@@ -69,6 +70,15 @@ export default function AppRouter() {
             element={
               <Suspense fallback={<PageLoading />}>
                 <AboutPage />
+              </Suspense>
+            }
+          />
+          {/* 项目详情页（动态路由） */}
+          <Route
+            path="/works/:id"
+            element={
+              <Suspense fallback={<PageLoading />}>
+                <WorksDetailPage />
               </Suspense>
             }
           />

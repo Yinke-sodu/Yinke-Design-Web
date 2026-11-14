@@ -12,6 +12,12 @@ export interface Project {
   tags: string[]
   year: number
   link?: string
+  /** 外部网站跳转链接（详情页使用） */
+  externalLink?: string
+  /** 详情页展示图片 */
+  gallery?: string[]
+  /** 更详细的项目介绍（详情页使用） */
+  longDescription?: string
 }
 
 /** 照片类型 */
